@@ -11,5 +11,4 @@ filescount=fc()
 if filescount==1:
     print("swipe code")
 else:
-    print("Number is")
-    #os.system("python alphabets_main.py")
+    os.system("python alphabets_main.py")
