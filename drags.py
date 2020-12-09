@@ -1,7 +1,7 @@
 import os
 
 def fc():
-    filescountpath=os.listdir("C:/Users/SpectrusRage/3D Objects/alphabets/alphabets_ss")
+    filescountpath=os.listdir("C:/Users/SpectrusRage/3D Objects/alphabets/oneimg_ss")
     filescount=0
     for a_file in filescountpath:
         filescount+=1
