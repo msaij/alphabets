@@ -5,9 +5,9 @@ import tkinter as tk
 from tkinter import messagebox
 
 folderofpic="C:/Users/SpectrusRage/3D Objects/alphabets/oneimg_ss"
-imgname="theoneandonlyimg.png"
+imgname="security_pic.png"
 
-def excptmainimg_del_evryothrfile():
+def excptmainimg_del_evryothrfile(): #this function is being complied in mainfn_saveandcheck
     for thefile in os.listdir(folderofpic):
         if thefile==imgname:
             pass
@@ -17,14 +17,14 @@ def excptmainimg_del_evryothrfile():
             except:
                 os.rmdir(os.path.join(folderofpic,thefile))
 
-def saveimg():
+def saveimg(): #this function is being complied in mainfn_saveandcheck
     print("Pick an image you want as your screen lock")
     myScreenshot = pyautogui.screenshot() #screenshot is taken and saved in myScreenshot
     imgpath=os.path.join(folderofpic,imgname)
     myScreenshot.save(imgpath)
     print("Success.")
 
-def createlockappfolder():
+def createlockappfolder(): #this function is being complied in mainfn_saveandcheck
     try:
         lckfldr="lockfolder"
         lckfldrpath=os.path.join(".",lckfldr)
@@ -41,7 +41,8 @@ def mainfn_saveandcheck():
             saveimg()
     createlockappfolder()
 
-mainfn_saveandcheck() # Running the main function which has both saveimg() and excptmainimg_del_evryothrfile()
+mainfn_saveandcheck()
+# Running the mainfn_saveandcheck() which has createlockappfolder(),saveimg() and excptmainimg_del_evryothrfile()
 
 p=tk.Tk()
 p.attributes('-alpha',0)
